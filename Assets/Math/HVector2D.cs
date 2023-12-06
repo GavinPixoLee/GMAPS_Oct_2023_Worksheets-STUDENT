@@ -49,34 +49,35 @@ public class HVector2D
 
     public static HVector2D operator /(HVector2D vector, float scale)
     {
-        return scale == 0 ? new HVector2D(vector.x / scale, vector.y / scale) : new HVector2D(0, 0);
+        return scale == 0 ? new HVector2D(0, 0) : new HVector2D(vector.x / scale, vector.y / scale);
     }
 
     public float Magnitude()
     {
-        return (float)Math.Sqrt((x * x) + (y * y));
+        return (float)Math.Sqrt((this.x * this.x) + (this.y * this.y));
     }
 
     public void Normalize()
     {
-        this.x /= this.Magnitude();
-        this.y /= this.Magnitude();
+        float magnitude = this.Magnitude();
+        this.x /= magnitude;
+        this.y /= magnitude;
     }
 
-    // public float DotProduct(/*???*/)
-    // {
+    public float DotProduct(HVector2D vector)
+    {
+        return (this.x * vector.x) + (this.y * vector.y);
+    }
 
-    // }
+    public HVector2D Projection(HVector2D vector)
+    {
+        return vector * (DotProduct(vector) / vector.DotProduct(vector));
+    }
 
-    // public HVector2D Projection(/*???*/)
-    // {
-
-    // }
-
-    // public float FindAngle(/*???*/)
-    // {
-
-    // }
+    public float FindAngle(HVector2D vector)
+    {
+        return (float)Mathf.Acos(DotProduct(vector) / (this.Magnitude() * vector.Magnitude()));
+    }
 
     public Vector2 ToUnityVector2()
     {

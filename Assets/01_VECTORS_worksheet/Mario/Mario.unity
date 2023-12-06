@@ -453,7 +453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planet: {fileID: 25543976}
   force: 5
-  gravityStrength: 4
+  gravityStrength: 2
 --- !u!50 &1602136179
 Rigidbody2D:
   serializedVersion: 4
@@ -505,7 +505,51 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planet: {fileID: 25543976}
   force: 5
-  gravityStrength: 5
+  gravityStrength: 2
+--- !u!1 &1812414639
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1812414641}
+  - component: {fileID: 1812414640}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1812414640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812414639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bd2534e23ccea94fbcb202e28f36e27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1812414641
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812414639}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.594448, y: 2.458895, z: -3.2109866}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2142997463
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -564,6 +608,10 @@ PrefabInstance:
     - target: {fileID: 1672728459227633656, guid: 29df0457641db2d4f999446359339959, type: 3}
       propertyPath: m_Name
       value: Astronaut
+      objectReference: {fileID: 0}
+    - target: {fileID: 1672728459227633656, guid: 29df0457641db2d4f999446359339959, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1672728459227633657, guid: 29df0457641db2d4f999446359339959, type: 3}
       propertyPath: m_ApplyRootMotion

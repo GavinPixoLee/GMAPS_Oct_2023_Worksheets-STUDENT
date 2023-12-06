@@ -20,7 +20,7 @@ public class Mario : MonoBehaviour
     void FixedUpdate()
     {
         gravityDir = planet.position - transform.position;
-        moveDir = new Vector3(-gravityDir.y, gravityDir.x, 0f);
+        moveDir = new Vector3(gravityDir.y, -gravityDir.x, 0f);
         moveDir = moveDir.normalized * -1f;
 
         rb.AddForce(moveDir * force);
